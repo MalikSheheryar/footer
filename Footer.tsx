@@ -168,12 +168,12 @@ export default function Footer() {
                 placeholder="Enter your email"
                 className="border-2 border-[#D5DAE1] bg-white"
               />
-              <Button className="font-poppins h-9.5 rounded-[4px] bg-[#01FFFF] text-sm text-[#001325]">
+              <Button className="font-poppins h-9.5 rounded-[4px] bg-[#01FFFF] text-sm text-[#001325] hover:bg-[#01FFFF]">
                 Subscribe
               </Button>
               <Button
                 onClick={() => setIsModalOpen(true)}
-                className="font-poppins h-9.5 rounded-[4px] bg-[#01FFFF] text-sm text-[#001325]"
+                className="font-poppins h-9.5 rounded-[4px] bg-[#01FFFF] text-sm text-[#001325] hover:bg-[#01FFFF]"
               >
                 Smart Contract
               </Button>
@@ -200,7 +200,23 @@ export default function Footer() {
           </Link>
           <div>
             <p className="font-nohemi mb-2 text-center text-xs font-bold text-white lg:absolute lg:top-6">
-              Terms & Conditions | Privacy Policy | Smart Contract |
+              <a
+                href="https://popsy.gitbook.io/popsy-docs/legal-disclaimer/terms-and-conditions"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline"
+              >
+                Terms & Conditions
+              </a>
+              {" | "}
+              <a
+                href="https://popsy.gitbook.io/popsy-docs/legal-disclaimer/privacy-policy"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline"
+              >
+                Privacy Policy
+              </a>
             </p>
             <p className="text-center text-xs font-medium text-[#8896AB] lg:absolute lg:right-0 lg:bottom-2">
               &copy; 2025 POPSY. Built with frost by magical devs.
@@ -229,7 +245,7 @@ export default function Footer() {
               )}
               <Button
                 onClick={() => setIsModalOpen(false)}
-                className="mt-4 w-full bg-[#01FFFF] text-[#001325]"
+                className="mt-4 w-full bg-[#01FFFF] text-[#001325] hover:bg-[#01FFFF]"
               >
                 Close
               </Button>
