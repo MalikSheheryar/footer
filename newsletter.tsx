@@ -12,7 +12,7 @@
     <div className="mx-auto mb-4 flex max-w-80 flex-col items-start space-y-4 gap-x-6 lg:mb-0 lg:min-w-115 lg:flex-row lg:justify-between">
       {/* ✅ Formspree form wraps only email + subscribe button */}
       <form
-        action="https://formspree.io/f/your_form_id" // <-- Replace this with your actual Formspree URL
+        action="https://formspree.io/f/mjkevkez" // <-- Replace this with your actual Formspree URL
         method="POST"
         className="flex flex-col space-y-4 lg:flex-row lg:space-y-0 lg:space-x-4"
       >
