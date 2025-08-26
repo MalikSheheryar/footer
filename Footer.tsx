@@ -161,28 +161,49 @@ export default function Footer() {
               Stay in the loop with everything you need to know.
             </p>
           </div>
+
           <div className="lg:flex lg:max-w-115 lg:flex-col lg:items-end lg:space-y-2.5">
-            <div className="mx-auto mb-4 flex max-w-80 flex-col items-start space-y-4 gap-x-6 lg:mb-0 lg:min-w-115 lg:flex-row lg:justify-between">
+            {/* ✅ Formspree Form Starts Here */}
+            <form
+              action="https://formspree.io/f/mjkevkez" // ← Replace with your Formspree endpoint
+              method="POST"
+              className="mx-auto mb-4 flex max-w-80 flex-col items-start space-y-4 gap-x-6 lg:mb-0 lg:min-w-115 lg:flex-row lg:justify-between"
+            >
               <Input
                 type="email"
+                name="email" // ← This is important
                 placeholder="Enter your email"
+                required
                 className="border-2 border-[#D5DAE1] bg-white"
               />
-              <Button className="font-poppins h-9.5 rounded-[4px] bg-[#01FFFF] text-sm text-[#001325] hover:bg-[#01FFFF]">
-                Subscribe
-              </Button>
               <Button
-                onClick={() => setIsModalOpen(true)}
+                type="submit"
                 className="font-poppins h-9.5 rounded-[4px] bg-[#01FFFF] text-sm text-[#001325] hover:bg-[#01FFFF]"
               >
-                Smart Contract
+                Subscribe
               </Button>
-            </div>
+            </form>
+            {/* ✅ End of Form */}
+
+            {/* Smart Contract Button */}
+            <Button
+              onClick={() => setIsModalOpen(true)}
+              className="font-poppins h-9.5 rounded-[4px] bg-[#01FFFF] text-sm text-[#001325] hover:bg-[#01FFFF]"
+            >
+              Smart Contract
+            </Button>
+
+            {/* Privacy Policy */}
             <div className="text-center text-[10px] font-medium text-white">
               We care about your data in our{" "}
-              <Link href="/privacy-policy" className="text-[#01FFFF]">
-                privacy policy
-              </Link>
+              <a
+                href="https://popsy.gitbook.io/popsy-docs/legal-disclaimer/privacy-policy"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#01FFFF] hover:underline"
+              >
+                Privacy Policy
+              </a>
             </div>
           </div>
         </div>
