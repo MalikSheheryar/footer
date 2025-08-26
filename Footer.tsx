@@ -163,35 +163,42 @@ export default function Footer() {
           </div>
 
           <div className="lg:flex lg:max-w-115 lg:flex-col lg:items-end lg:space-y-2.5">
-            {/* ✅ Formspree Form Starts Here */}
-            <form
-              action="https://formspree.io/f/mjkevkez" // ← Replace with your Formspree endpoint
-              method="POST"
-              className="mx-auto mb-4 flex max-w-80 flex-col items-start space-y-4 gap-x-6 lg:mb-0 lg:min-w-115 lg:flex-row lg:justify-between"
-            >
-              <Input
-                type="email"
-                name="email" // ← This is important
-                placeholder="Enter your email"
-                required
-                className="border-2 border-[#D5DAE1] bg-white"
-              />
-              <Button
-                type="submit"
-                className="font-poppins h-9.5 rounded-[4px] bg-[#01FFFF] text-sm text-[#001325] hover:bg-[#01FFFF]"
+            <div className="mx-auto mb-4 flex max-w-80 flex-col items-start space-y-4 gap-x-6 lg:mb-0 lg:min-w-115 lg:flex-row lg:justify-between">
+              {/* ✅ Formspree form wraps only email + subscribe button */}
+              <form
+                action="https://formspree.io/f/your_form_id" // <-- Replace this with your actual Formspree URL
+                method="POST"
+                className="flex flex-col space-y-4 lg:flex-row lg:space-y-0 lg:space-x-4"
               >
-                Subscribe
-              </Button>
-            </form>
-            {/* ✅ End of Form */}
+                <Input
+                  type="email"
+                  name="email"
+                  placeholder="Enter your email"
+                  required
+                  className="border-2 border-[#D5DAE1] bg-white"
+                />
+                <Button
+                  type="submit"
+                  className="font-poppins h-9.5 rounded-[4px] bg-[#01FFFF] text-sm text-[#001325] hover:bg-[#01FFFF]"
+                >
+                  Subscribe
+                </Button>
+              </form>
 
-            {/* Smart Contract Button */}
-            <Button
-              onClick={() => setIsModalOpen(true)}
-              className="font-poppins h-9.5 rounded-[4px] bg-[#01FFFF] text-sm text-[#001325] hover:bg-[#01FFFF]"
-            >
-              Smart Contract
-            </Button>
+              {/* ✅ Smart Contract button in the same row */}
+              <Button
+                onClick={() => setIsModalOpen(true)}
+                className="font-poppins flex h-9.5 items-center gap-2 rounded-[4px] bg-[#01FFFF] text-sm text-[#001325] hover:bg-[#01FFFF]"
+              >
+                <span>Smart Contract</span>
+                <Image
+                  src="/solana-sol-icon.svg"
+                  alt="Solana Icon"
+                  width={16}
+                  height={16}
+                />
+              </Button>
+            </div>
 
             {/* Privacy Policy */}
             <div className="text-center text-[10px] font-medium text-white">
